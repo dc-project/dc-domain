@@ -1,0 +1,9 @@
+.release
+release.sh
+.idea
+.env
+__pycahche__/
+*.pyc
+ex_domain.py
+config.py
+Dockerfile
