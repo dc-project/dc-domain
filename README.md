@@ -8,6 +8,24 @@
 - 删除指定三级域名
 - 更新指定三级域名
 
+## 使用
+
+```angular2html
+./domain.py domain -h  
+usage: domain.py [-h] domain <subcommand> ...
+
+positional arguments:
+  domain        resolve domain
+  <subcommand>
+    init        init domain resolve
+    del         del domain resolve
+    update      update domain resolve
+
+optional arguments:
+  -h, --help    show this help message and exit
+
+```
+
 ## Todo
 
 [ ] 支持ali dns  
