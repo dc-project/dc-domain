@@ -30,4 +30,5 @@ optional arguments:
 
 [ ] 支持ali dns  
 [ ] 支持指定初始化三级域名
+[ ] 支持docker快速部署
 
