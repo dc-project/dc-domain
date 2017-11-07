@@ -6,3 +6,5 @@ __pycahche__/
 *.pyc
 ex_domain.py
 config.py
+Dockerfile
+Dockerfile.release
