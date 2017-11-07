@@ -7,3 +7,4 @@ __pycahche__/
 ex_domain.py
 config.py
 Dockerfile
+domain.sh
