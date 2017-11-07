@@ -10,6 +10,7 @@
 
 ## 使用
 
+### Code
 ```angular2html
 ./domain.py domain -h  
 usage: domain.py [-h] domain <subcommand> ...
@@ -25,10 +26,14 @@ optional arguments:
   -h, --help    show this help message and exit
 
 ```
+### Docker 
+```angular2html
+docker run -it --rm -v $PWD/config.py:/tmp/config.py hub.goodrain.com/dc-deploy/archiver:ex_domain 
+```
 
 ## Todo
 
 [ ] 支持ali dns  
 [ ] 支持指定初始化三级域名
-[ ] 支持docker快速部署
+[x] 支持docker快速部署
 
