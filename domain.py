@@ -117,8 +117,8 @@ class ExDomain(object):
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(metavar='<domain support command>')
+    parser = argparse.ArgumentParser(description="Goodrain Domain DC-Tools")
+    subparsers = parser.add_subparsers(metavar='<subcommand>')
     init_command = subparsers.add_parser('init', help='init domain resolve')
     init_command.add_argument('--ip', action='store', default='127.0.0.1')
     init_command.set_defaults(func=ExDomain.init_domain)
@@ -141,6 +141,10 @@ def main():
 
     if hasattr(args, 'func') and args.func is not None:
         args.func(args)
+    else:
+        print("<subcommand> choose from 'init', 'del', 'update'.")
+        print("Thank you.")
+        return 1
 
 if __name__ == '__main__':
     try:
