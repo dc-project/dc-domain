@@ -118,8 +118,7 @@ class ExDomain(object):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('domain', action='store', default=None, help='resolve domain')
-    subparsers = parser.add_subparsers(metavar='<subcommand>')
+    subparsers = parser.add_subparsers(metavar='<domain support command>')
     init_command = subparsers.add_parser('init', help='init domain resolve')
     init_command.add_argument('--ip', action='store', default='127.0.0.1')
     init_command.set_defaults(func=ExDomain.init_domain)
@@ -134,7 +133,12 @@ def main():
     update_command.set_defaults(func=ExDomain.update_domain)
 
     args = parser.parse_args()
-    #do_stdout(args)
+
+    """
+    stdout args
+    """
+    # do_stdout(args)
+
     if hasattr(args, 'func') and args.func is not None:
         args.func(args)
 
