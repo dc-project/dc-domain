@@ -1,0 +1,23 @@
+FROM projectdc/core_py
+
+MAINTAINER ysicing
+
+RUN apt update;apt  install build-essential python3-dev zlib1g-dev -y;
+
+RUN pip3 install urllib3==1.10.0 six==1.10.0 cx_freeze==6.0b1
+
+ADD . /tmp/
+
+WORKDIR /tmp/
+
+RUN cxfreeze domain.py
+
+RUN rm -rf ./*.py
+
+ENV VERSION=__VERSION__
+
+ENTRYPOINT ["/tmp/domain_encode.sh"]
+
+
+
+

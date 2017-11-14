@@ -28,12 +28,13 @@ optional arguments:
 ```
 ### Docker 
 ```angular2html
-docker run -it --rm -v $PWD/config.py:/tmp/config.py hub.goodrain.com/dc-deploy/archiver:ex_domain 
+docker run -it --rm -v $PWD/config.py:/tmp/config.py projectdc/ex_domain:master init --ip <ip>
+
+docker run -it --rm projectdc/ex_domain:dev init --ip <ip>
 ```
 
 ## Todo
 
 [ ] 支持ali dns  
-[ ] 支持指定初始化三级域名
-[x] 支持docker快速部署
+
 
