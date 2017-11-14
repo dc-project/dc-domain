@@ -15,12 +15,12 @@ positional arguments:
     """
     exit 0
 elif [[ "$1" == "init" ]];then
-    IP=${2:-127.0.0.1}
+    IP=${3:-127.0.0.1}
     exec /usr/local/bin/python /tmp/domain.py $1 --ip ${IP}
 elif [[ "$1" == "update" ]];then
-    exec /usr/local/bin/python /tmp/domain.py $1 --ip $2 --domain $3
+    exec /usr/local/bin/python /tmp/domain.py $1 --ip $3 --domain $5
 elif [[ "$1" == "del" ]];then
-    /usr/local/bin/python /tmp/domain.py $1 --domain $2
+    /usr/local/bin/python /tmp/domain.py $1 --domain $3
 else
     exec /bin/bash
 fi
